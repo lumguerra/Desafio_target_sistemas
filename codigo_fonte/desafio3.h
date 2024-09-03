@@ -12,22 +12,14 @@ class Desafio3
 public:
     Desafio3()
     {
-        std::cout << "DESAFIO 3:\n";
-        std::cout << "=================\n";
-        std::string json_str = lerJsonFile("faturamento_mensal.json");
-        std::vector<double> vec = addJsonNoVetor(json_str);
-        removerZeros(vec);
-        for(double i : vec)
-        {
-            std::cout << i << "\n";
-        }
-        exibirMenorFaturamento(vec);
-        exibirMaiorFaturamento(vec);        
+        std::cout << "DESAFIO 3:\n\n";
+        processar();
+        std::cout << "==================================\n";
     };
 
-private:  
+private: 
 
-    std::string lerJsonFile(std::string nome_arquivo)
+    std::string lerArquivoJson(std::string nome_arquivo)
     {
         std::ifstream file(nome_arquivo);
         if(!file.is_open())
@@ -65,24 +57,32 @@ private:
         }
     }
 
-    void exibirMenorFaturamento(std::vector<double> &faturamento)
+    //menor valor de faturamento ocorrido em um dia do mês
+    double MenorFaturamento(std::vector<double> &faturamento)
     {
-        double menor_valor;
+        removerZeros(faturamento);
         
+        double menor_valor =  faturamento[0];
+
         for(size_t i = 0; i < faturamento.size(); ++i)
         {
-            if((faturamento[i] !=0) && (faturamento[i] < menor_valor))
+            if(faturamento[i] < menor_valor)
             {
                 menor_valor = faturamento[i];
             }
         }
 
         std::cout << "O menor valor de faturamento ocorrido em um dia do mes foi " << menor_valor << "\n";
+
+        return menor_valor;
     }
 
-    void exibirMaiorFaturamento(std::vector<double> &faturamento)
+    //maior valor de faturamento ocorrido em um dia do mês
+    double calcularMaiorFaturamento(std::vector<double> &faturamento)
     {
         double maior_valor = faturamento[0];
+
+        removerZeros(faturamento);
         
         for(size_t i = 0; i < faturamento.size(); ++i)
         {
@@ -93,7 +93,51 @@ private:
         }
 
         std::cout << "O maior valor de faturamento ocorrido em um dia do mes foi " << maior_valor << "\n";
-    }     
+
+        return maior_valor;
+    }   
+
+    double calcularMedia(std::vector<double> &faturamento)
+    {
+        removerZeros(faturamento);
+        int qtd_dias = faturamento.size();
+        double valor_total{0};
+
+        for(double valor : faturamento)
+        {
+            valor_total += valor;
+        }
+
+        return valor_total / qtd_dias;        
+    }  
+
+    //número de dias no mês em que o valor de faturamento diário foi superior à média mensal
+    int diasAcimaDaMedia(std::vector<double> faturamento)
+    {
+        double media = calcularMedia(faturamento);
+        int dias_acima_media{0};
+
+        for(size_t i = 0; i < faturamento.size(); ++i)
+        {
+            if(faturamento[i] > media)
+            {
+                ++ dias_acima_media;
+            }
+        }
+
+        std::cout << "Numero de dias no mes em que o valor de faturamento diario foi superior a media mensal: " << dias_acima_media << "\n";
+
+        return dias_acima_media;        
+    }
+
+    void processar()
+    {
+        std::string json_str = lerArquivoJson("faturamento_mensal.json");
+        std::vector<double> faturamento = addJsonNoVetor(json_str);
+        MenorFaturamento(faturamento);
+        calcularMaiorFaturamento(faturamento); 
+        diasAcimaDaMedia(faturamento);
+    }
 };
 
 

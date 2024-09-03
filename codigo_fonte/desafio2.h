@@ -8,26 +8,26 @@ class Desafio2
 public: 
     Desafio2()
     {
-        std::cout << "DESAFIO 2:\n";
+        std::cout << "DESAFIO 2:\n\n";
         processar();
-        std::cout << "=================\n";
+        std::cout << "==================================\n";
     }
 
 private:
     int numero{0};
-    bool valido{false};
+    bool entradaValida{false};
     std::vector<int> fibonacci{0,1};
 
-    void checarValidade(const std::string& input)
+    void validarEntradaNumerica(const std::string& input)
     {
         try
         {
             numero = std::stoi(input);
-            valido = true;
+            entradaValida = true;
         }
         catch(const std::invalid_argument&)
         {
-            valido = false;
+            entradaValida = false;
             std::cout << "Entrada invalida. Por favor, insira um numero valido.\n";
         }
     }
@@ -67,9 +67,9 @@ private:
         {
             std::cout << "Informe um numero: \n";
             std::cin >> input;
-            checarValidade(input);
+            validarEntradaNumerica(input);
 
-        } while (!valido);
+        } while (!entradaValida);
 
         checarFibonacci(numero);
     }

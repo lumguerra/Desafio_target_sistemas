@@ -6,14 +6,16 @@
 #include "desafio1.h"
 #include "desafio2.h"
 #include "desafio3.h"
+#include "desafio4.h"
+#include "desafio5.h"
 
 int main()
 {
-    // Desafio1 d1;
-    // Desafio2 d2;
-
-Desafio3 d3;
-
+    Desafio1 d1;
+    Desafio2 d2;
+    Desafio3 d3;    
+    Desafio4 d4;
+    Desafio5 d5;
 
     return 0;
 }

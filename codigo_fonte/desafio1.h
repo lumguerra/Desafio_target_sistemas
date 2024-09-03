@@ -6,10 +6,10 @@ class Desafio1
 public:
     Desafio1()
     {
-        std::cout << "=================\n";
-        std::cout << "DESAFIO 1:\n";
-        processar();
-        std::cout << "=================\n";
+        std::cout << "==================================\n";
+        std::cout << "DESAFIO 1:\n\n";
+        calcularSoma();
+        std::cout << "==================================\n";
     }
 
 private:
@@ -17,11 +17,11 @@ private:
     int SOMA{0};
     int K{0};
 
-    void processar()
+    void calcularSoma()
     {
         while(K < INDICE)
         {
-            K = K + 1;
+            K += 1;
             SOMA = SOMA + K;
         }
         std::cout << "SOMA = " << SOMA << "\n";
