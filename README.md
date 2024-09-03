@@ -1,5 +1,5 @@
 
-# Projeto de Desafios em C++ para Target Sistemas
+# Projeto de Desafios para o processo seletivo da Target Sistemas
 
 Este repositório contém uma série de desafios escritos em C++, que fazem parte do processo seletivo da empresa Target Sistemas. Esses desafios abordam diversos conceitos, como manipulação de strings, cálculos matemáticos, uso de estruturas de dados e leitura de arquivos JSON. Eles foram implementados para praticar e demonstrar minhas habilidades em programação e processamento de dados.
 
