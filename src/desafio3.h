@@ -12,6 +12,7 @@ class Desafio3
 public:
     Desafio3()
     {
+        std::cout << "==================================\n";
         std::cout << "DESAFIO 3:\n\n";
         processar();
         std::cout << "==================================\n";
@@ -70,7 +71,7 @@ private:
             }
         }
 
-        std::cout << "O menor valor de faturamento ocorrido em um dia do mês foi " << menor_valor << "\n";
+        std::cout << "O menor valor de faturamento ocorrido em um dia do mes foi R$" << menor_valor << "\n";
 
         return menor_valor;
     }
@@ -89,7 +90,7 @@ private:
             }
         }
 
-        std::cout << "O maior valor de faturamento ocorrido em um dia do mês foi " << maior_valor << "\n";
+        std::cout << "O maior valor de faturamento ocorrido em um dia do mes foi R$" << maior_valor << "\n";
 
         return maior_valor;
     }   
@@ -121,14 +122,14 @@ private:
             }
         }
 
-        std::cout << "Número de dias no mês em que o valor de faturamento diário foi superior à média mensal: " << dias_acima_media << "\n";
+        std::cout << "Numero de dias no mes em que o valor de faturamento diario foi superior a media mensal: " << dias_acima_media << "\n";
 
         return dias_acima_media;        
     }
 
     void processar()
     {
-        std::string json_str = lerArquivoJson("data/faturamento_mensal.json");
+        std::string json_str = lerArquivoJson("../data/faturamento_mensal.json");
         std::vector<double> faturamento = addJsonNoVetor(json_str);
         calcularMenorFaturamento(faturamento);
         calcularMaiorFaturamento(faturamento); 

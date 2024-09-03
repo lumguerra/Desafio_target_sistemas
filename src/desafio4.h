@@ -8,6 +8,7 @@ class Desafio4
 public:
     Desafio4()
     {
+        std::cout << "==================================\n";
         std::cout << "DESAFIO 4:\n\n";
         processar();
         std::cout << "==================================\n";
@@ -56,7 +57,7 @@ private:
     {
         auto it_faturamento = faturamento.begin();
         
-        std::cout << "Percentual de representação que cada estado teve dentro do valor total mensal da distribuidora: \n";
+        std::cout << "Percentual de representacao que cada estado teve dentro do valor total mensal da distribuidora: \n";
 
         for(size_t i = 0; i < faturamento.size(); ++i)
         {

@@ -8,6 +8,7 @@ class Desafio2
 public: 
     Desafio2()
     {
+        std::cout << "==================================\n";
         std::cout << "DESAFIO 2:\n\n";
         processar();
         std::cout << "==================================\n";

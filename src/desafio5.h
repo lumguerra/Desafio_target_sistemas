@@ -6,6 +6,7 @@ class Desafio5
 public:
     Desafio5()
     {
+        std::cout << "==================================\n";
         std::cout << "DESAFIO 5:\n\n";
         std::cout << inverterString(str) << "\n";
         std::cout << "==================================\n";

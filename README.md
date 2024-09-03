@@ -17,10 +17,7 @@ Este repositório contém uma série de desafios escritos em C++, que fazem part
 │   └── json.hpp
 ├── data/
 │   └── faturamento_mensal.json
-├── build/
-│   └── (arquivos compilados)
 ├── README.md
-└── .gitignore
 ```
 
 ### Descrição das Pastas
@@ -28,9 +25,7 @@ Este repositório contém uma série de desafios escritos em C++, que fazem part
 - **src/**: Contém os arquivos de código-fonte do projeto, onde cada desafio está implementado em um arquivo `.hpp`.
 - **libs/**: Armazena a biblioteca externa `nlohmann/json` usada para manipulação de arquivos JSON.
 - **data/**: Contém o arquivo `faturamento_mensal.json` usado pelo Desafio 3.
-- **build/**: Diretório onde os arquivos binários gerados durante a compilação serão armazenados.
 - **README.md**: Este arquivo que você está lendo, com instruções e informações sobre o projeto.
-- **.gitignore**: Arquivo que especifica quais arquivos ou pastas devem ser ignorados pelo Git.
 
 ## Como Compilar e Executar
 
@@ -51,15 +46,15 @@ Este repositório contém uma série de desafios escritos em C++, que fazem part
 2. **Compile o projeto:**
 
    ```sh
-   g++ -std=c++17 -I./libs -o build/desafios src/*.cpp
+   g++ .\main.cpp
    ```
 
-   Isso compilará todos os arquivos `.cpp` no diretório `src/` e colocará o executável resultante na pasta `build/`.
+   Isso compilará todos o arquivo `.cpp` no diretório `src/` e criará o executável resultante dentro da mesma pasta.
 
 3. **Execute o programa:**
 
    ```sh
-   ./build/desafios
+   .\a.exe   
    ```
 
    O programa será executado, apresentando os resultados dos desafios implementados.
@@ -81,14 +76,6 @@ O desafio calcula e exibe o percentual de representação do faturamento de dife
 ### Desafio 5: Inversão de String
 Este desafio inverte uma string predefinida e exibe o resultado.
 
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
-
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias, correções de bugs ou novas funcionalidades.
-
 ## Autor
 
-- **Lucas Mazoni Guerra** - [LinkedIn](https://www.linkedin.com/in/seu-usuario) | [GitHub](https://github.com/seu-usuario)
+- **Lucas Mazoni Guerra** - [LinkedIn](https://www.linkedin.com/in/lucas-guerra-66a40a238/) | [Meu portfolio](https://guerradev.com/)
