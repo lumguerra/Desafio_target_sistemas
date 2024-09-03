@@ -78,4 +78,4 @@ Este desafio inverte uma string predefinida e exibe o resultado.
 
 ## Autor
 
-- **Lucas Mazoni Guerra** - [LinkedIn](https://www.linkedin.com/in/lucas-guerra-66a40a238/) | [Meu portfolio](https://guerradev.com/)
+- **Lucas Mazoni Guerra** - [LinkedIn](https://www.linkedin.com/in/lucas-guerra-66a40a238/) | [Meu website](https://guerradev.com/)
