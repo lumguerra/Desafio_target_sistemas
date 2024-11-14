@@ -1,7 +1,7 @@
 
 # Projeto de desafios Uninove
 
-Este repositório contém uma série de desafios escritos em C++, que fazem parte do processo seletivo da empresa Target Sistemas. Esses desafios abordam diversos conceitos, como manipulação de strings, cálculos matemáticos, uso de estruturas de dados e leitura de arquivos JSON. Eles foram implementados para praticar e demonstrar minhas habilidades em programação e processamento de dados.
+Este repositório contém uma série de desafios escritos em C++. Esses desafios abordam diversos conceitos, como manipulação de strings, cálculos matemáticos, uso de estruturas de dados e leitura de arquivos JSON. Eles foram implementados para praticar e demonstrar minhas habilidades em programação e processamento de dados.
 
 ## Estrutura do Projeto
 
